@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toba Travel – Supir & Tour Danau Toba (Start Medan)</title>
+
+  <!-- SEO Essentials -->
+  <meta name="description" content="Jasa supir & tour Danau Toba start Medan. Paket wisata hemat, private trip, family trip. Booking mudah via WhatsApp atau form online." />
+  <meta name="keywords" content="Danau Toba, tour Medan, supir Medan, paket wisata Toba, rental mobil Medan" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Toba Travel – Supir & Tour Danau Toba" />
+  <meta property="og:description" content="Paket wisata Danau Toba lengkap. Driver berpengalaman, harga transparan, itinerary fleksibel." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1200" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (ganti sesuai asetmu) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚐</text></svg>">
+
+  <!-- Local Business Schema (sesuaikan datanya) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Toba Travel",
+    "image": "https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1200",
+    "url": "https://example.com/",
+    "telephone": "+62-812-3456-7890",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Contoh No. 1",
+      "addressLocality": "Medan",
+      "addressRegion": "Sumatera Utara",
+      "postalCode": "20111",
+      "addressCountry": "ID"
+    },
+    "geo": {"@type": "GeoCoordinates", "latitude": 3.5952, "longitude": 98.6722},
+    "openingHours": "Mo-Su 07:00-22:00",
+    "sameAs": [
+      "https://www.instagram.com/yourhandle",
+      "https://www.facebook.com/yourhandle"
+    ]
+  }
+  </script>
+
+  <!-- Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles: modern, accessible, responsive -->
+  <style>
+    :root{
+      --bg: #0b1220;          /* dark */
+      --bg-soft: #121a2b;
+      --fg: #eef2ff;
+      --fg-dim: #c7d2fe;
+      --brand: #22d3ee;       /* cyan */
+      --brand-2: #38bdf8;     /* sky */
+      --acc: #34d399;         /* emerald */
+      --card: #0f172a90;
+      --border: #2a3550;
+      --shadow: 0 10px 30px rgba(2,8,23,.35);
+    }
+    [data-theme="light"]{
+      --bg:#ffffff; --bg-soft:#f5f7fb; --fg:#0b1220; --fg-dim:#334155;
+      --card:#ffffff; --border:#e2e8f0; --shadow:0 10px 30px rgba(2,8,23,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
+    a{color:var(--brand)}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin-inline:auto;padding:0 16px}
+    .btn{display:inline-flex;gap:.5rem;align-items:center;border:1px solid var(--border);background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001b2b;padding:.8rem 1rem;border-radius:14px;font-weight:700;text-decoration:none;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+    .btn.block{width:100%;justify-content:center}
+    .badge{display:inline-block;padding:.25rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.8rem;color:var(--fg-dim)}
+    .nav{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--bg-soft) 70%, transparent);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:800}
+    .brand .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--acc));color:#00222f}
+    .nav a{color:var(--fg);text-decoration:none}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .menu a{opacity:.9}
+    .menu a:hover{opacity:1}
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 10% -20%, color-mix(in oklab,var(--brand) 30%,transparent), transparent),radial-gradient(700px 320px at 90% -10%, color-mix(in oklab,var(--brand-2) 35%,transparent), transparent);z-index:-1;opacity:.75}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:56px 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
+    .card.pad{padding:22px}
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .section{padding:56px 0}
+    .muted{color:var(--fg-dim)}
+    .h1{font-size:clamp(28px,4.4vw,46px);line-height:1.05;margin:0 0 10px}
+    .h2{font-size:clamp(22px,3vw,32px);margin:0 0 10px}
+    .h3{font-size:clamp(18px,2.2vw,22px);margin:0}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi strong{font-size:28px}
+    .pillbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .surface{background:var(--bg-soft);border:1px dashed var(--border);padding:10px;border-radius:14px}
+    .pkg{display:flex;flex-direction:column;gap:12px}
+    .pkg .price{font-size:24px}
+    .tbl{width:100%;border-collapse:collapse}
+    .tbl th,.tbl td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery a{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+    .testi{display:flex;gap:14px}
+    .testi .item{min-width:280px}
+    .sticky-cta{position:fixed;inset:auto 12px 12px auto;z-index:60}
+    .backtop{position:fixed;right:12px;bottom:72px;z-index:60}
+    .lang{display:flex;gap:8px}
+    .foot{padding:28px 0;border-top:1px solid var(--border)}
+    .notice{position:fixed;left:50%;transform:translateX(-50%);bottom:0;margin:12px;z-index:70}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .menu{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="nav" aria-label="Utama">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Beranda">
+        <span class="logo">🗺️</span>
+        <span>Toba Travel</span>
+      </a>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#paket">Paket</a>
+        <a role="menuitem" href="#galeri">Galeri</a>
+        <a role="menuitem" href="#testi">Testimoni</a>
+        <a role="menuitem" href="#faq">FAQ</a>
+        <a role="menuitem" href="#kontak">Kontak</a>
+        <div class="lang" aria-label="Bahasa">
+          <button class="btn ghost" id="themeToggle" title="Tema">🌓</button>
+          <button class="btn ghost" data-i18n="id">ID</button>
+          <button class="btn ghost" data-i18n="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="h1">Supir & Tour <span style="color:var(--brand)">Danau Toba</span> – Start Medan</h1>
+        <p class="muted">Private trip nyaman, itinerary fleksibel, harga transparan. Cocok untuk keluarga, honeymoon, dan rombongan kecil.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#kontak">Booking Sekarang</a>
+          <a class="btn ghost" href="#paket">Lihat Paket</a>
+        </div>
+        <div class="pillbar" aria-label="Fitur utama">
+          <span class="badge">Driver Berpengalaman</span>
+          <span class="badge">Mobil Nyaman</span>
+          <span class="badge">Gratis Itinerary</span>
+          <span class="badge">CS 07.00–22.00</span>
+        </div>
+      </div>
+      <div class="card pad">
+        <img src="https://images.unsplash.com/photo-1544551763-7ef42032f6de?q=80&w=1200&auto=format&fit=crop" alt="Pemandangan Danau Toba" width="900" height="600" loading="lazy" />
+        <div class="surface" style="margin-top:10px">
+          <div class="kpi"><strong>1.2k+</strong> <span class="muted">Tamu puas</span></div>
+          <div class="kpi"><strong>4.9/5</strong> <span class="muted">Rating rata‑rata</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Packages -->
+  <section id="paket" class="section container">
+    <h2 class="h2">Paket Wisata</h2>
+    <p class="muted">Harga transparan, bisa custom. Semua paket termasuk driver, BBM, parkir, dan tol dasar.</p>
+    <div class="grid grid-3">
+      <article class="card pad pkg" aria-labelledby="pkg1">
+        <div><span class="badge">Hemat</span></div>
+        <h3 id="pkg1" class="h3">Toba Day Trip</h3>
+        <p class="muted">Medan ↔ Toba PP, spot utama Parapat & Balige.</p>
+        <div class="price"><strong>Rp 900.000</strong> /mobil</div>
+        <ul class="muted">
+          <li>Max 4 pax (Avanza/Brio)</li>
+          <li>12 jam</li>
+          <li>Gratis air mineral</li>
+        </ul>
+        <a class="btn" href="#kontak" data-select-pkg="Toba Day Trip" aria-label="Pesan paket Toba Day Trip">Pilih Paket</a>
+      </article>
+
+      <article class="card pad pkg" aria-labelledby="pkg2">
+        <div><span class="badge">Populer</span></div>
+        <h3 id="pkg2" class="h3">2D1N Toba – Samosir</h3>
+        <p class="muted">Menginap di Samosir, explore Tomok, Huta Bolon, Bukit Holbung.</p>
+        <div class="price"><strong>Rp 2.500.000</strong> /mobil</div>
+        <ul class="muted">
+          <li>Max 6 pax (Innova)</li>
+          <li>Hotel opsional</li>
+          <li>Tiket ferry termasuk</li>
+        </ul>
+        <a class="btn" href="#kontak" data-select-pkg="2D1N Toba – Samosir">Pilih Paket</a>
+      </article>
+
+      <article class="card pad pkg" aria-labelledby="pkg3">
+        <div><span class="badge">Keluarga</span></div>
+        <h3 id="pkg3" class="h3">3D2N Medan – Toba – Berastagi</h3>
+        <p class="muted">Full experience: kuliner Medan, sunrise Berastagi, danau & budaya Batak.</p>
+        <div class="price"><strong>Rp 3.900.000</strong> /mobil</div>
+        <ul class="muted">
+          <li>Max 6 pax (Innova)</li>
+          <li>Itinerary fleksibel</li>
+          <li>Gratis dokumentasi basic</li>
+        </ul>
+        <a class="btn" href="#kontak" data-select-pkg="3D2N Medan – Toba – Berastagi">Pilih Paket</a>
+      </article>
+    </div>
+
+    <!-- Simple dynamic price helper -->
+    <details class="card pad" style="margin-top:16px">
+      <summary><strong>Simulasi Harga</strong> (est.)</summary>
+      <div class="grid grid-2" style="margin-top:10px">
+        <label>Jumlah Hari
+          <input id="days" type="number" min="1" max="7" value="2" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+        </label>
+        <label>Jenis Mobil
+          <select id="car" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+            <option value="600">Avanza/Brio (Rp600k/hari)</option>
+            <option value="900" selected>Innova (Rp900k/hari)</option>
+            <option value="1500">Hiace (Rp1.5jt/hari)</option>
+          </select>
+        </label>
+      </div>
+      <p class="muted">*Belum termasuk hotel & makan.</p>
+      <div id="est" class="h3">Perkiraan: Rp 1.800.000</div>
+    </details>
+  </section>
+
+  <!-- Gallery -->
+  <section id="galeri" class="section container">
+    <h2 class="h2">Galeri</h2>
+    <p class="muted">Cuplikan perjalanan para tamu. Klik untuk perbesar.</p>
+    <div class="gallery" aria-label="Galeri foto">
+      <a href="https://images.unsplash.com/photo-1558981359-219d6364c9c8?q=80&w=1600&auto=format&fit=crop" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?q=80&w=600&auto=format&fit=crop" alt="Bukit di sekitar Danau Toba" width="600" height="400"></a>
+      <a href="https://images.unsplash.com/photo-1558981403-c5f9899d3f48?q=80&w=1600&auto=format&fit=crop" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558981403-c5f9899d3f48?q=80&w=600&auto=format&fit=crop" alt="Pemandangan danau" width="600" height="400"></a>
+      <a href="https://images.unsplash.com/photo-1558980664-10ea99e1f273?q=80&w=1600&auto=format&fit=crop" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1558980664-10ea99e1f273?q=80&w=600&auto=format&fit=crop" alt="Perahu dan danau" width="600" height="400"></a>
+      <a href="https://images.unsplash.com/photo-1544551763-7ef42032f6de?q=80&w=1600&auto=format&fit=crop" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1544551763-7ef42032f6de?q=80&w=600&auto=format&fit=crop" alt="Lanskap hijau" width="600" height="400"></a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testi" class="section container">
+    <h2 class="h2">Testimoni</h2>
+    <div class="card pad">
+      <div class="testi" id="testiTrack" style="overflow:auto;scroll-snap-type:x mandatory">
+        <div class="item card pad" style="scroll-snap-align:start">
+          <p>“Driver ramah, itinerary fleksibel. Anak-anak happy banget!”</p>
+          <div class="muted">– Dina • Keluarga 5 pax</div>
+        </div>
+        <div class="item card pad" style="scroll-snap-align:start">
+          <p>“View terbaik di Holbung, dikasih spot foto rahasia. Mantap.”</p>
+          <div class="muted">– Rafi • Couple</div>
+        </div>
+        <div class="item card pad" style="scroll-snap-align:start">
+          <p>“Harga sesuai, ga ada biaya tersembunyi. Next time repeat!”</p>
+          <div class="muted">– Kelvin • Trip Teman</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px">
+        <button class="btn ghost" id="prevT">◀</button>
+        <button class="btn ghost" id="nextT">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section container">
+    <h2 class="h2">FAQ</h2>
+    <details class="card pad"><summary><strong>Termasuk apa saja?</strong></summary>
+      <p>Driver, BBM, parkir & tol dasar. Hotel & makan opsional.</p></details>
+    <details class="card pad"><summary><strong>Metode pembayaran?</strong></summary>
+      <p>DP 30% (transfer), pelunasan H‑1 via transfer atau cash.</p></details>
+    <details class="card pad"><summary><strong>Refund & reschedule?</strong></summary>
+      <p>Reschedule gratis H‑3 jika tanggal tersedia. Refund mengikuti kebijakan hotel/ferry.</p></details>
+  </section>
+
+  <!-- Map (static embed placeholder to keep single-file) -->
+  <section class="section container" aria-labelledby="mapTitle">
+    <h2 id="mapTitle" class="h2">Lokasi Jemput Populer</h2>
+    <div class="card" style="aspect-ratio:16/9;overflow:hidden">
+      <iframe title="Peta Medan" width="100%" height="100%" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Medan&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- Contact / Booking -->
+  <section id="kontak" class="section container">
+    <h2 class="h2">Booking & Kontak</h2>
+    <div class="grid grid-2">
+      <form id="bookingForm" class="card pad" novalidate
+            data-endpoint="/api/bookings"    
+            data-method="POST"                
+            data-csrf="{{ CSRF_TOKEN }}"      
+            data-slack-webhook="/api/notify"  
+            aria-describedby="bookingNote">
+        <div class="grid grid-2">
+          <label>Nama Lengkap
+            <input required name="name" type="text" placeholder="Nama Anda" maxlength="80" pattern="^[A-Za-zÀ-ỹ'\-\s]{2,}$" aria-required="true"
+                   style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+          </label>
+          <label>WhatsApp
+            <input required name="wa" type="tel" placeholder="08xxxxxxxxxx" inputmode="tel" pattern="^0\d{9,14}$"
+                   style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+          </label>
+        </div>
+        <div class="grid grid-2">
+          <label>Tanggal Jemput
+            <input required name="date" type="date" min="" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+          </label>
+          <label>Jumlah Orang
+            <input required name="pax" type="number" min="1" max="15" value="2"
+                   style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+          </label>
+        </div>
+        <label>Paket (opsional)
+          <input name="package" type="text" id="selectedPkg" placeholder="Contoh: 2D1N Toba – Samosir" 
+                 style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)">
+        </label>
+        <label>Catatan
+          <textarea name="note" rows="3" placeholder="Preferensi / itinerary / penjemputan" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--bg-soft);color:var(--fg)"></textarea>
+        </label>
+        <div class="grid grid-2">
+          <button type="submit" class="btn">Kirim Permintaan</button>
+          <a id="waBtn" class="btn ghost" target="_blank" rel="noopener">Chat WhatsApp</a>
+        </div>
+        <small id="bookingNote" class="muted">Form ini akan mencoba mengirim ke backend (<code>/api/bookings</code>) dan juga membuka WhatsApp untuk fast‑response. Jika backend belum siap, WA tetap jalan.</small>
+        <output id="formStatus" class="muted" style="display:block;margin-top:8px"></output>
+      </form>
+
+      <aside class="card pad">
+        <h3 class="h3">Jam Layanan</h3>
+        <table class="tbl"><tbody>
+          <tr><th>Senin–Minggu</th><td>07.00 – 22.00 WIB</td></tr>
+          <tr><th>Telepon</th><td><a href="tel:+6281234567890">+62 812‑3456‑7890</a></td></tr>
+          <tr><th>WhatsApp</th><td><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">wa.me/6281234567890</a></td></tr>
+          <tr><th>Email</th><td><a href="mailto:hello@tobatravel.id">hello@tobatravel.id</a></td></tr>
+          <tr><th>Alamat</th><td>Jl. Contoh No. 1, Medan</td></tr>
+        </tbody></table>
+        <div class="surface" style="margin-top:10px">
+          <p class="muted">Butuh invoice perusahaan atau PO? Kami support e‑invoice & rek. resmi.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="container grid grid-2">
+      <div>
+        <div class="brand"><span class="logo">🗺️</span><strong>Toba Travel</strong></div>
+        <p class="muted">© <span id="year"></span> Toba Travel. All rights reserved.</p>
+      </div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;align-items:start;flex-wrap:wrap">
+        <a class="btn ghost" href="#faq">Kebijakan & Refund</a>
+        <a class="btn ghost" href="#paket">Paket</a>
+        <a class="btn" href="#kontak">Booking</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA & Back to Top -->
+  <div class="sticky-cta"><a class="btn" href="#kontak" aria-label="Booking sekarang (floating)">📅 Booking</a></div>
+  <div class="backtop"><a class="btn ghost" href="#home" aria-label="Kembali ke atas">⬆</a></div>
+
+  <!-- Cookie/Promo Notice (dismissible) -->
+  <div class="notice card pad" id="notice" role="dialog" aria-live="polite" aria-label="Pemberitahuan">
+    <div class="grid grid-2">
+      <div>
+        <strong>Promo Akhir Pekan</strong>
+        <p class="muted" style="margin:.2rem 0 0">Diskon 10% untuk booking 3D2N. Gunakan kode: <code>TOBA10</code></p>
+      </div>
+      <div style="text-align:right"><button class="btn ghost" id="closeNotice" aria-label="Tutup pemberitahuan">Tutup</button></div>
+    </div>
+  </div>
+
+  <!-- Minimal JS (no framework) – includes backend hooks & progressive enhancement -->
+  <script>
+    // THEME
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); }
+    themeToggle?.addEventListener('click', () => {
+      const now = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', now); localStorage.setItem('theme', now);
+    });
+
+    // YEAR
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // SIMULATOR
+    const days = document.getElementById('days');
+    const car = document.getElementById('car');
+    const est = document.getElementById('est');
+    function calc(){ const n = Math.max(1, parseInt(days.value||1)); const c = parseInt(car.value||0); est.textContent = `Perkiraan: Rp ${ (n*c*1000).toLocaleString('id-ID') }`; }
+    days?.addEventListener('input', calc); car?.addEventListener('change', calc); calc();
+
+    // TESTIMONIALS CONTROLS
+    const track = document.getElementById('testiTrack');
+    document.getElementById('prevT')?.addEventListener('click',()=>track.scrollBy({left:-320,behavior:'smooth'}));
+    document.getElementById('nextT')?.addEventListener('click',()=>track.scrollBy({left: 320,behavior:'smooth'}));
+
+    // SELECT PACKAGE → prefill
+    document.querySelectorAll('[data-select-pkg]').forEach(btn=>btn.addEventListener('click',()=>{
+      document.getElementById('selectedPkg').value = btn.getAttribute('data-select-pkg');
+    }));
+
+    // BOOKING FORM (Backend Hooks)
+    (function(){
+      const form = document.getElementById('bookingForm');
+      if(!form) return;
+      const out  = document.getElementById('formStatus');
+      const waBtn= document.getElementById('waBtn');
+      const date = form.querySelector('input[name="date"]');
+      // Set min date = today
+      date.min = new Date().toISOString().split('T')[0];
+
+      function toQuery(obj){ return new URLSearchParams(obj).toString(); }
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        out.textContent = '';
+        const data = Object.fromEntries(new FormData(form).entries());
+        // Basic validations
+        const pax = parseInt(data.pax || '0',10);
+        if(pax < 1){ out.textContent = 'Jumlah orang minimal 1.'; return; }
+        if(!/^0\d{9,14}$/.test(data.wa||'')){ out.textContent = 'Masukkan nomor WA valid (format 08xxxxxxxxxx).'; return; }
+
+        // Prepare WhatsApp deep link
+        const waNumber = '6281234567890'; // ganti ke nomor admin
+        const msg = `Halo Toba Travel%0A%0APesanan:%0A- Nama: ${encodeURIComponent(data.name||'')}`+
+                    `%0A- WA: ${encodeURIComponent(data.wa||'')}`+
+                    `%0A- Tanggal: ${encodeURIComponent(data.date||'')}`+
+                    `%0A- Pax: ${encodeURIComponent(data.pax||'')}`+
+                    `%0A- Paket: ${encodeURIComponent(data.package||'-')}`+
+                    `%0A- Catatan: ${encodeURIComponent(data.note||'-')}`;
+        const waLink = `https://wa.me/${waNumber}?text=${msg}`;
+        waBtn.href = waLink; // visible fallback
+
+        // Try POST to backend (progressive enhancement)
+        const endpoint = form.dataset.endpoint; // e.g. /api/bookings
+        const headers  = { 'Content-Type':'application/json' };
+        const csrf     = form.dataset.csrf; if(csrf) headers['X-CSRF-Token'] = csrf;
+        const payload  = { ...data, source:'website', createdAt:new Date().toISOString() };
+
+        try{
+          const res = await fetch(endpoint, { method: form.dataset.method||'POST', headers, body: JSON.stringify(payload) });
+          if(!res.ok) throw new Error('HTTP '+res.status);
+          out.textContent = 'Berhasil mengirim ke admin. Kamu juga bisa lanjut chat WhatsApp untuk fast-response.';
+          // Notify ops (optional webhook)
+          const notify = form.dataset.slackWebhook; // /api/notify
+          notify && fetch(notify, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:`Booking baru: ${payload.name} • ${payload.date} • ${payload.pax}pax`})});
+          // Auto open WhatsApp to secure lead
+          window.open(waLink, '_blank','noopener');
+          form.reset();
+        }catch(err){
+          // If backend not ready, fallback to WhatsApp only
+          out.textContent = 'Server sedang sibuk / belum aktif. Mengalihkan ke WhatsApp…';
+          window.open(waLink, '_blank','noopener');
+        }
+      });
+    })();
+
+    // NOTICE
+    document.getElementById('closeNotice')?.addEventListener('click',()=>{
+      document.getElementById('notice').remove();
+    });
+
+    // I18N (simple sample: ID/EN)
+    const dict = {
+      en: {
+        title: 'Toba Travel – Driver & Tour Lake Toba (Start Medan)',
+        bookingNow: 'Book Now',
+      },
+      id: { title: 'Toba Travel – Supir & Tour Danau Toba (Start Medan)', bookingNow: 'Booking Sekarang' }
+    };
+    document.querySelectorAll('[data-i18n]')?.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const lang = btn.dataset.i18n;
+        document.title = dict[lang].title;
+        document.querySelectorAll('a[href="#kontak"]').forEach(a=>{ if(a.textContent?.match(/Book|Booking/)) a.firstChild.nodeValue = dict[lang].bookingNow; });
+        localStorage.setItem('lang', lang);
+      });
+    });
+    const savedLang = localStorage.getItem('lang'); if(savedLang){ document.querySelector(`[data-i18n="${savedLang}"]`)?.click(); }
+  </script>
+</body>
+</html>
