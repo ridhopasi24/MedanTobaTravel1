@@ -1,1657 +1,215 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title data-i18n="title">MEDAN TOBA SUMATERA TOUR & TRAVEL | Wisata Halal Medan - Danau Toba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEDAN TOBA SUMATERA TOUR & TRAVEL | Wisata Halal Medan - Danau Toba</title>
+
+  <!-- SEO Essentials -->
   <meta name="description" content="Paket wisata Danau Toba dari Medan dengan supir Muslim, mobil bersih, harga transparan. Booking via WhatsApp!" />
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+  <meta name="keywords" content="Danau Toba, tour Medan, supir Medan, paket wisata Toba, rental mobil Medan, wisata halal Sumatera" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MEDAN TOBA SUMATERA TOUR & TRAVEL | Wisata Halal Medan - Danau Toba" />
+  <meta property="og:description" content="Paket wisata Danau Toba lengkap. Driver berpengalaman, harga transparan, itinerary fleksibel." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1200" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🚐</text></svg>">
 
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "MEDAN TOBA SUMATERA TOUR & TRAVEL",
+    "image": "https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1200",
+    "url": "https://example.com/",
+    "telephone": "+62 813-9760-6622",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Medan",
+      "addressLocality": "Medan",
+      "addressRegion": "Sumatera Utara",
+      "addressCountry": "ID"
+    },
+    "geo": {"@type": "GeoCoordinates", "latitude": 3.5952, "longitude": 98.6722},
+    "openingHours": "Mo-Su 07:00-22:00",
+    "sameAs": [
+      "https://facebook.com/medantobasumatera",
+      "https://instagram.com/medantobasumatera",
+      "https://youtube.com/@medantobasumatera"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles: modern, accessible, responsive -->
   <style>
-    :root {
-      --bg: #ffffff;
-      --bg-soft: #f8fafc;
-      --fg: #0f172a;
-      --fg-dim: #64748b;
-      --card: #ffffff;
-      --border: #e2e8f0;
-      --primary: #059669;
-      --primary-light: #10b981;
-      --primary-dark: #047857;
-      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-
-    .dark {
-      --bg: #0f172a;
-      --bg-soft: #1e293b;
-      --fg: #e2e8f0;
-      --fg-dim: #94a3b8;
-      --card: #1e293b;
-      --border: #334155;
-    }
-
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin-inline: auto;
-      padding: 0 1.5rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.75rem;
-      font-weight: 600;
-      transition: all 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-whatsapp {
-      background: linear-gradient(45deg, #25D366, #128C7E);
-      color: white;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--fg);
-      border: 1px solid var(--border);
-    }
-
-    .btn-ghost:hover {
-      background: var(--bg-soft);
-    }
-
-    .btn-block {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    .badge-primary {
-      background: var(--primary-light);
-      color: white;
-    }
-
-    .badge-secondary {
-      background: #fbbf24;
-      color: #7c2d12;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: color-mix(in oklab, var(--bg-soft) 80%, transparent);
-      backdrop-filter: saturate(1.2) blur(10px);
-      border-bottom: 1px solid var(--border);
-      transition: all 0.3s;
-    }
-
-    .nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .logo {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
-      font-size: 1.2rem;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    .nav-link {
-      color: var(--fg-dim);
-      font-weight: 500;
-      transition: all 0.3s;
-      position: relative;
-      padding-bottom: 0.25rem;
-    }
-
-    .nav-link:hover {
-      color: var(--primary);
-    }
-
-    .nav-link.active {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    .nav-link.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 1px;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--fg);
-    }
-
-    .hero {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-bg {
-      background-image: url('https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-    }
-
-    .hero-overlay {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 30, 60, 0.7) 100%);
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      color: white;
-    }
-
-    .h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 8vw, 3.5rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin: 0 0 1rem;
-    }
-
-    .h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 700;
-      margin: 0 0 1rem;
-    }
-
-    .h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .text-xl {
-      font-size: 1.25rem;
-      color: var(--fg-dim);
-      margin: 0;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-
-    .section {
-      padding: 4rem 0;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      box-shadow: var(--shadow);
-      transition: all 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .card-pad {
-      padding: 1.5rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
-    }
-
-    .fade-in.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .stats {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .stat strong {
-      font-size: 1.875rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .stat span {
-      color: var(--fg-dim);
-      font-size: 0.875rem;
-    }
-
-    .package-card {
-      background: var(--bg-soft);
-      border-radius: 1rem;
-      overflow: hidden;
-      transition: all 0.3s;
-      border: 1px solid var(--border);
-    }
-
-    .package-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .pillbar {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .feature {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
-      color: var(--fg-dim);
-      font-size: 0.9rem;
-    }
-
-    .feature i {
-      color: var(--primary-light);
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.5rem;
-    }
-
-    .gallery img {
-      border-radius: 0.5rem;
-      object-fit: cover;
-      height: 12rem;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: var(--shadow-md);
-    }
-
-    .testimonials {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .testimonial {
-      min-width: 20rem;
-      padding: 1.5rem;
-      background: var(--bg-soft);
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      scroll-snap-align: start;
-      transition: all 0.3s;
-    }
-
-    .testimonial:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .testimonial-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-avatar {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 9999px;
-      margin-right: 1rem;
-      object-fit: cover;
-    }
-
-    .testimonial-name {
-      font-weight: 600;
-      color: var(--fg);
-    }
-
-    .testimonial-location {
-      font-size: 0.875rem;
-      color: var(--fg-dim);
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      color: var(--fg-dim);
-      line-height: 1.6;
-    }
-
-    .accordion {
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-    }
-
-    .accordion-header {
-      padding: 1.25rem;
-      cursor: pointer;
-      background: var(--bg-soft);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.3s;
-    }
-
-    .accordion-header:hover {
-      background: color-mix(in oklab, var(--bg-soft) 50%, var(--primary));
-    }
-
-    .accordion-header.open {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .accordion-content {
-      padding: 0 1.25rem;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .accordion-content.open {
-      padding: 1.25rem;
-      max-height: 200px;
-      background: var(--bg-soft);
-    }
-
-    .social-buttons {
-      display: flex;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .social-button {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 1.125rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .social-button:hover {
-      transform: scale(1.1);
-    }
-
-    .facebook {
-      background: #1877f2;
-    }
-
-    .instagram {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc277f, #c13584, #515bd4);
-    }
-
-    .youtube {
-      background: #ff0000;
-    }
-
-    .whatsapp {
-      background: linear-gradient(45deg, #25D366, #128C7E);
-    }
-
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 100;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .lightbox.open {
-      display: flex;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      color: white;
-      font-size: 3rem;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-    .lightbox-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-
-    .lightbox-nav.prev {
-      left: 1rem;
-    }
-
-    .lightbox-nav.next {
-      right: 3.5rem;
-    }
-
-    .lightbox-img {
-      max-height: 90vh;
-      max-width: 90vw;
-      object-fit: contain;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .lightbox-img.show {
-      opacity: 1;
-    }
-
-    .footer {
-      padding: 3rem 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
-
-    .footer-title {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .footer-link {
-      display: block;
-      color: var(--fg-dim);
-      margin-bottom: 0.5rem;
-      transition: color 0.3s;
-    }
-
-    .footer-link:hover {
-      color: var(--primary);
-    }
-
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      color: var(--fg-dim);
-      font-size: 0.875rem;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 99;
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #25D366, #128C7E);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 1.5rem;
-      box-shadow: var(--shadow-lg);
-      transition: transform 0.3s;
-    }
-
-    .floating-whatsapp:hover {
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 1024px) {
-      .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .hero-content {
-        text-align: center;
-      }
-      
-      .hero-cta {
-        justify-content: center;
-      }
-      
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      .mobile-menu-btn {
-        display: block;
-      }
-      
-      .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--card);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 4rem 2rem;
-        transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      }
-      
-      .nav-menu.open {
-        right: 0;
-      }
-      
-      .mobile-menu-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .h1 {
-        font-size: 2rem;
-      }
-      
-      .section {
-        padding: 3rem 0;
-      }
-      
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
+    :root{
+      --bg: #0b1220;
+      --bg-soft: #121a2b;
+      --fg: #eef2ff;
+      --fg-dim: #c7d2fe;
+      --brand: #22d3ee;
+      --brand-2: #38bdf8;
+      --acc: #34d399;
+      --primary: #0ea5e9;
+      --secondary: #10b981;
+      --card: #0f172a90;
+      --border: #2a3550;
+      --shadow: 0 10px 30px rgba(2,8,23,.35);
+    }
+    [data-theme="light"]{
+      --bg:#ffffff;
+      --bg-soft:#f5f7fb;
+      --fg:#0b1220;
+      --fg-dim:#334155;
+      --card:#ffffff;
+      --border:#e2e8f0;
+      --shadow:0 10px 30px rgba(2,8,23,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin-inline:auto;padding:0 16px}
+    .btn{display:inline-flex;gap:.5rem;align-items:center;border:1px solid var(--border);background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001b2b;padding:.8rem 1rem;border-radius:14px;font-weight:700;text-decoration:none;box-shadow:var(--shadow);transition:all 0.3s}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 15px 25px rgba(34,211,238,0.3)}
+    .btn.ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+    .btn.ghost:hover{background:var(--bg-soft)}
+    .btn.block{width:100%;justify-content:center}
+    .btn.whatsapp{background:linear-gradient(45deg,#25D366,#128C7E);color:white}
+    .btn.whatsapp:hover{transform:translateY(-2px);box-shadow:0 15px 25px rgba(37,211,102,0.4)}
+    .badge{display:inline-block;padding:.25rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.8rem;color:var(--fg-dim);transition:all 0.3s}
+    .badge:hover{background:var(--bg-soft);transform:scale(1.05)}
+    .nav{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--bg-soft) 70%, transparent);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0}
+    .brand{display:flex;align-items:center;gap:.5rem;font-weight:800;font-family:'Playfair Display',serif}
+    .brand .logo{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#00222f}
+    .menu{display:flex;gap:1.5rem;align-items:center}
+    .menu a{color:var(--fg);opacity:.9;font-weight:500;transition:all 0.3s}
+    .menu a:hover{opacity:1;transform:scale(1.05)}
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 10% -20%, color-mix(in oklab,var(--brand) 30%,transparent), transparent),radial-gradient(700px 320px at 90% -10%, color-mix(in oklab,var(--brand-2) 35%,transparent), transparent);z-index:-1;opacity:.75}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:56px 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);transition:all 0.3s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(2,8,23,.2)}
+    .card.pad{padding:22px}
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .section{padding:56px 0}
+    .muted{color:var(--fg-dim)}
+    .h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4.4vw,46px);line-height:1.05;margin:0 0 10px;font-weight:700}
+    .h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);margin:0 0 10px;font-weight:700}
+    .h3{font-size:clamp(18px,2.2vw,22px);margin:0;font-weight:600}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi strong{font-size:28px;font-weight:700}
+    .pillbar{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .surface{background:var(--bg-soft);border:1px dashed var(--border);padding:10px;border-radius:14px}
+    .pkg{display:flex;flex-direction:column;gap:12px}
+    .pkg .price{font-size:24px;font-weight:700}
+    .tbl{width:100%;border-collapse:collapse}
+    .tbl th,.tbl td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery a{border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:all 0.3s}
+    .gallery a:hover{transform:scale(1.03);box-shadow:0 10px 20px rgba(2,8,23,.2)}
+    .testi{display:flex;gap:14px}
+    .testi .item{min-width:280px;padding:16px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--border);transition:all 0.3s}
+    .testi .item:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(2,8,23,.1)}
+    .sticky-cta{position:fixed;inset:auto 12px 12px auto;z-index:60}
+    .backtop{position:fixed;right:12px;bottom:72px;z-index:60}
+    .lang{display:flex;gap:8px}
+    .foot{padding:28px 0;border-top:1px solid var(--border)}
+    .notice{position:fixed;left:50%;transform:translateX(-50%);bottom:0;margin:12px;z-index:70;max-width:400px}
+    .fade-in{opacity:0;transform:translateY(20px);transition:all 0.6s ease-out}
+    .fade-in.active{opacity:1;transform:translateY(0)}
+    .accordion{border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden}
+    .accordion summary{padding:16px;cursor:pointer;background:var(--bg-soft);transition:all 0.3s}
+    .accordion summary:hover{background:color-mix(in oklab, var(--bg-soft) 50%, var(--brand))}
+    .accordion[open] summary{border-bottom:1px solid var(--border)}
+    .accordion .content{padding:16px;background:var(--bg-soft)}
+
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .menu{display:none}
+      .h1{font-size:2.2rem}
+      .h2{font-size:1.8rem}
     }
   </style>
 </head>
 <body class="transition-colors duration-300">
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container nav-container">
-      <a href="#home" class="logo-container">
-        <div class="logo">🚐</div>
-        <div>
-          <h1>MEDAN TOBA SUMATERA</h1>
-          <p style="margin:0; font-size:0.875rem; color:var(--fg-dim)">Tour & Travel</p>
-        </div>
+  <!-- Top Navigation -->
+  <nav class="nav" aria-label="Utama">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Beranda">
+        <span class="logo">🗺️</span>
+        <span>MEDAN TOBA SUMATERA</span>
       </a>
-      
-      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-      
-      <div class="nav-menu" id="navMenu">
-        <button class="mobile-menu-close" id="mobileMenuClose">×</button>
-        <a href="#home" class="nav-link active" data-i18n="nav-home">Beranda</a>
-        <a href="#packages" class="nav-link" data-i18n="nav-packages">Paket Wisata</a>
-        <a href="#gallery" class="nav-link" data-i18n="nav-gallery">Galeri</a>
-        <a href="#testimonials" class="nav-link" data-i18n="nav-testimonials">Testimoni</a>
-        <a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a>
-        <a href="#about" class="nav-link" data-i18n="nav-about">Tentang Kami</a>
-        <a href="#contact" class="nav-link" data-i18n="nav-contact">Kontak</a>
-        
-        <div style="display:flex; align-items:center; gap:0.75rem; margin-left:auto;">
-          <button id="themeToggle" class="btn btn-ghost" style="padding:0.5rem;" data-i18n="theme-toggle">☀️</button>
-          <button id="langToggle" class="btn btn-ghost" style="padding:0.5rem;" data-i18n="lang-toggle">EN</button>
+      <div class="menu" role="menubar">
+        <a role="menuitem" href="#paket">Paket Wisata</a>
+        <a role="menuitem" href="#galeri">Galeri</a>
+        <a role="menuitem" href="#testi">Testimoni</a>
+        <a role="menuitem" href="#faq">FAQ</a>
+        <a role="menuitem" href="#tentang">Tentang Kami</a>
+        <div class="lang" aria-label="Bahasa">
+          <button class="btn ghost" id="themeToggle" title="Tema">🌓</button>
+          <button class="btn ghost" data-i18n="id">ID</button>
+          <button class="btn ghost" data-i18n="en">EN</button>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1 class="h1" data-i18n="hero-title">Wisata Nyaman &amp; <span style="color:var(--primary-light)">Halal</span><br>Medan – Danau Toba</h1>
-      <p class="text-xl" data-i18n="hero-desc">Dengan supir Muslim lokal, mobil bersih, dan itinerary yang fleksibel. Pengalaman tak terlupakan dimulai dari sini.</p>
-      <div class="hero-cta">
-        <a href="#packages" class="btn btn-whatsapp" data-i18n="btn-book">Daftar Paket Wisata</a>
-        <a href="#packages" class="btn btn-ghost" data-i18n="btn-see-packages">Lihat Paket</a>
-      </div>
-      <div class="pillbar">
-        <span class="badge badge-primary" data-i18n="feat-driver">Supir Muslim</span>
-        <span class="badge badge-primary" data-i18n="feat-bbm">BBM & Parkir</span>
-        <span class="badge badge-primary" data-i18n="feat-lunch">Makan Siang</span>
-        <span class="badge badge-primary" data-i18n="feat-guide">Guide Lokal</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="section bg-gray-50 dark:bg-gray-800">
-    <div class="container">
-      <div class="grid grid-3">
-        <div class="card card-pad fade-in">
-          <div class="stat">
-            <strong>500+</strong>
-            <span data-i18n="stat-customers">Pelanggan Puas</span>
-          </div>
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="fade-in">
+        <h1 class="h1">Wisata Nyaman &amp; <span style="color:var(--primary)">Halal</span> Medan – Danau Toba</h1>
+        <p class="muted">Dengan supir Muslim lokal, mobil bersih, dan itinerary yang fleksibel. Pengalaman tak terlupakan dimulai dari sini.</p>
+        <div class="hero-cta">
+          <a class="btn whatsapp" href="#paket">Daftar Paket Wisata</a>
+          <a class="btn ghost" href="#paket">Lihat Paket</a>
         </div>
-        <div class="card card-pad fade-in">
-          <div class="stat">
-            <strong>6 Tahun</strong>
-            <span data-i18n="stat-experience">Pengalaman</span>
-          </div>
+        <div class="pillbar" aria-label="Fitur utama">
+          <span class="badge">Supir Muslim</span>
+          <span class="badge">Mobil Bersih</span>
+          <span class="badge">Itinerary Fleksibel</span>
+          <span class="badge">CS 07.00–22.00</span>
         </div>
-        <div class="card card-pad fade-in">
-          <div class="stat">
-            <strong>100%</strong>
-            <span data-i18n="stat-halal">Muslim Friendly</span>
-          </div>
+      </div>
+      <div class="card pad fade-in">
+        <img src="https://images.unsplash.com/photo-1544551763-7ef42032f6de?q=80&w=1200&auto=format&fit=crop" alt="Pemandangan Danau Toba" width="900" height="600" loading="lazy" />
+        <div class="surface" style="margin-top:10px">
+          <div class="kpi"><strong>500+</strong> <span class="muted">Pelanggan Puas</span></div>
+          <div class="kpi"><strong>6 Tahun</strong> <span class="muted">Pengalaman</span></div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Packages Section -->
-  <section class="section" id="packages">
-    <div class="container">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="h2" data-i18n="packages-title">Paket Wisata Populer</h2>
-        <p class="text-xl" data-i18n="packages-desc">Pilih paket yang sesuai dengan waktu dan anggaran Anda.</p>
+  <!-- Stats -->
+  <section class="section container">
+    <div class="grid grid-3">
+      <div class="card pad fade-in">
+        <div class="kpi"><strong>500+</strong> <span class="muted">Pelanggan Puas</span></div>
       </div>
-      
-      <div class="grid grid-3">
-        <!-- Paket 1 Hari -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <div><span class="badge badge-secondary" data-i18n="package-1-title">Paket 1 Hari</span></div>
-            <h3 class="h3" data-i18n="package-1-title">Paket 1 Hari</h3>
-            <p class="text-xl" data-i18n="package-1-desc">Medan - Toba PP, destinasi utama Parapat & Balige.</p>
-            <div class="price">
-              <strong data-i18n="package-1-price">Rp 750rb/orang</strong>
-            </div>
-            <ul class="mt-4">
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-driver">Supir Muslim</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-bbm">BBM & Parkir</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-lunch">Makan Siang</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-guide">Guide Lokal</span></li>
-            </ul>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20paket%201." class="btn btn-whatsapp btn-block mt-4" data-i18n="btn-book-now">
-              <i class="fab fa-whatsapp"></i> Booking Sekarang
-            </a>
-          </div>
-        </div>
-        
-        <!-- Paket 2 Hari 1 Malam -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <div><span class="badge badge-primary" data-i18n="badge-best">BEST SELLER</span></div>
-            <h3 class="h3" data-i18n="package-2-title">Paket 2 Hari 1 Malam</h3>
-            <p class="text-xl" data-i18n="package-2-desc">Menginap di Samosir, explore Tomok, Huta Bolon, Bukit Holbung.</p>
-            <div class="price">
-              <strong data-i18n="package-2-price">Mulai Rp 1.5jt/orang</strong>
-            </div>
-            <ul class="mt-4">
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-hotel">Hotel Bintang 2</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-meals">3x Makan</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-ticket">Tiket Wisata</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-water">Air Mineral</span></li>
-            </ul>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20paket%202." class="btn btn-whatsapp btn-block mt-4" data-i18n="btn-book-now">
-              <i class="fab fa-whatsapp"></i> Booking Sekarang
-            </a>
-          </div>
-        </div>
-        
-        <!-- Paket 3 Hari 2 Malam -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <div><span class="badge" style="background:var(--primary);color:white" data-i18n="package-3-title">Paket Lengkap</span></div>
-            <h3 class="h3" data-i18n="package-3-title">Paket 3 Hari 2 Malam</h3>
-            <p class="text-xl" data-i18n="package-3-desc">Full experience: Medan, Toba, Samosir, Berastagi.</p>
-            <div class="price">
-              <strong data-i18n="package-3-price">Mulai Rp 2.8jt/orang</strong>
-            </div>
-            <ul class="mt-4">
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-hotel">2 Malam Hotel</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-meals">6x Makan</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-ticket">Wisata Lengkap</span></li>
-              <li class="feature"><i class="fas fa-check"></i> <span data-i18n="feat-guide">Supir + Guide</span></li>
-            </ul>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20paket%203." class="btn btn-whatsapp btn-block mt-4" data-i18n="btn-book-now">
-              <i class="fab fa-whatsapp"></i> Booking Sekarang
-            </a>
-          </div>
-        </div>
+      <div class="card pad fade-in">
+        <div class="kpi"><strong>6 Tahun</strong> <span class="muted">Pengalaman</span></div>
       </div>
-      
-      <!-- Custom Trip -->
-      <div class="package-card fade-in" style="margin-top:2rem">
-        <div class="card-pad">
-          <div><span class="badge" style="background:#8b5cf6;color:white" data-i18n="custom-title">Custom Trip</span></div>
-          <h3 class="h3" data-i18n="custom-title">Perjalanan Kustom</h3>
-          <p class="text-xl" data-i18n="custom-desc">Itinerary fleksibel sesuai kebutuhan Anda.</p>
-          <div class="price">
-            <strong data-i18n="custom-price">Harga Negosiasi</strong>
-          </div>
-          <ul class="mt-4">
-            <li class="feature"><i class="fas fa-check"></i> <span data-i18n="custom-flex">Itinerary Fleksibel</span></li>
-            <li class="feature"><i class="fas fa-check"></i> <span data-i18n="custom-hotel">Pilihan Hotel</span></li>
-            <li class="feature"><i class="fas fa-check"></i> <span data-i18n="custom-car">Semua Jenis Mobil</span></li>
-            <li class="feature"><i class="fas fa-check"></i> <span data-i18n="custom-consult">Konsultasi Gratis</span></li>
-          </ul>
-          <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20ingin%20paket%20kustom." class="btn btn-whatsapp btn-block mt-4" data-i18n="btn-consult">
-            <i class="fab fa-whatsapp"></i> Konsultasi Gratis
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery Section -->
-  <section class="section bg-gray-50 dark:bg-gray-800" id="gallery">
-    <div class="container">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-        <div>
-          <h2 class="h2" data-i18n="gallery-title">Galeri Perjalanan Kami</h2>
-          <p class="text-xl" data-i18n="gallery-desc">Momen indah pelanggan kami di Danau Toba.</p>
-        </div>
-        <a href="#gallery" class="btn btn-ghost" data-i18n="btn-doc">Lihat Dokumentasi Lengkap</a>
-      </div>
-      
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?w=600&q=80" alt="Wisata 1" class="fade-in cursor-pointer" onclick="openLightbox(0)">
-        <img src="https://images.unsplash.com/photo-1558981403-c5f9899d3f48?w=600&q=80" alt="Wisata 2" class="fade-in cursor-pointer" onclick="openLightbox(1)">
-        <img src="https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=600&q=80" alt="Wisata 3" class="fade-in cursor-pointer" onclick="openLightbox(2)">
-        <img src="https://images.unsplash.com/photo-1544551763-7ef42032f6de?w=600&q=80" alt="Wisata 4" class="fade-in cursor-pointer" onclick="openLightbox(3)">
-        <img src="https://picsum.photos/id/1074/600/400" alt="Wisata 5" class="fade-in cursor-pointer" onclick="openLightbox(4)">
-        <img src="https://picsum.photos/id/1084/600/400" alt="Wisata 6" class="fade-in cursor-pointer" onclick="openLightbox(5)">
-        <img src="https://picsum.photos/id/1080/600/400" alt="Wisata 7" class="fade-in cursor-pointer" onclick="openLightbox(6)">
-        <img src="https://picsum.photos/id/1070/600/400" alt="Wisata 8" class="fade-in cursor-pointer" onclick="openLightbox(7)">
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <button id="lightbox-close" class="lightbox-close">&times;</button>
-    <button id="lightbox-prev" class="lightbox-nav prev"><</button>
-    <button id="lightbox-next" class="lightbox-nav next">></button>
-    <img id="lightbox-img" class="lightbox-img" src="" alt="">
-  </div>
-
-  <!-- Testimonials Section -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="h2" data-i18n="testimonials-title">Apa Kata Mereka?</h2>
-        <p class="text-xl" data-i18n="testimonials-desc">Pengalaman nyata dari pelanggan kami yang puas.</p>
-      </div>
-      
-      <div class="card card-pad">
-        <div class="testimonials" id="testimonialsSlider">
-          <!-- Testimoni 1 -->
-          <div class="testimonial">
-            <div class="testimonial-header">
-              <img src="https://placehold.co/100x100/10B981/ffffff?text=Ahmad" alt="Foto Ahmad" class="testimonial-avatar">
-              <div>
-                <h4 class="testimonial-name" data-i18n="testimonial-name-1">Ahmad & Keluarga</h4>
-                <p class="testimonial-location" data-i18n="testimonial-location-1">Jakarta</p>
-              </div>
-            </div>
-            <p class="testimonial-text" data-i18n="testimonial-text-1">"Pengalaman luar biasa! Supirnya ramah, mobilnya bersih, dan itinerary-nya sangat teratur. Kami sekeluarga sangat puas dengan MEDAN TOBA SUMATERA."</p>
-          </div>
-          
-          <!-- Testimoni 2 -->
-          <div class="testimonial">
-            <div class="testimonial-header">
-              <img src="https://placehold.co/100x100/3B82F6/ffffff?text=Sarah" alt="Foto Sarah" class="testimonial-avatar">
-              <div>
-                <h4 class="testimonial-name" data-i18n="testimonial-name-2">Sarah</h4>
-                <p class="testimonial-location" data-i18n="testimonial-location-2">Bandung</p>
-              </div>
-            </div>
-            <p class="testimonial-text" data-i18n="testimonial-text-2">"MEDAN TOBA SUMATERA memang amanah. Mereka sangat memperhatikan kebutuhan kami, bahkan soal makanan halal. Highly recommended!"</p>
-          </div>
-          
-          <!-- Testimoni 3 -->
-          <div class="testimonial">
-            <div class="testimonial-header">
-              <img src="https://placehold.co/100x100/F59E0B/ffffff?text=Ali" alt="Foto Ali" class="testimonial-avatar">
-              <div>
-                <h4 class="testimonial-name" data-i18n="testimonial-name-3">Ali & Teman-teman</h4>
-                <p class="testimonial-location" data-i18n="testimonial-location-3">Surabaya</p>
-              </div>
-            </div>
-            <p class="testimonial-text" data-i18n="testimonial-text-3">"Galeri foto mereka di website ini sesuai dengan kenyataan. Pemandangannya jauh lebih indah aslinya. Terima kasih MEDAN TOBA SUMATERA!"</p>
-          </div>
-        </div>
-        
-        <div style="display:flex; gap:0.5rem; justify-content:center; margin-top:1rem">
-          <button id="prevTestimonial" class="btn btn-ghost" style="padding:0.5rem">◀</button>
-          <button id="nextTestimonial" class="btn btn-ghost" style="padding:0.5rem">▶</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section bg-gray-50 dark:bg-gray-800" id="faq">
-    <div class="container">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="h2" data-i18n="faq-title">Pertanyaan Umum</h2>
-      </div>
-      
-      <div class="max-w-3xl mx-auto">
-        <!-- FAQ 1 -->
-        <div class="accordion">
-          <div class="accordion-header">
-            <h3 data-i18n="faq-payment">Pembayaran bagaimana?</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="accordion-content">
-            <p data-i18n="faq-payment-desc">DP 30% via transfer, sisa saat mobil datang menjemput.</p>
-          </div>
-        </div>
-        
-        <!-- FAQ 2 -->
-        <div class="accordion">
-          <div class="accordion-header">
-            <h3 data-i18n="faq-custom">Bisa custom itinerary?</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="accordion-content">
-            <p data-i18n="faq-custom-desc">Bisa! Kami menyediakan paket custom sesuai kebutuhan Anda.</p>
-          </div>
-        </div>
-        
-        <!-- FAQ 3 -->
-        <div class="accordion">
-          <div class="accordion-header">
-            <h3 data-i18n="faq-pickup">Jemput di mana saja?</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="accordion-content">
-            <p data-i18n="faq-pickup-desc">Kami jemput di seluruh Medan dan Bandara Kualanamu.</p>
-          </div>
-        </div>
-        
-        <!-- FAQ 4 -->
-        <div class="accordion">
-          <div class="accordion-header">
-            <h3 data-i18n="faq-vehicle">Kendaraan apa tersedia?</h3>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="accordion-content">
-            <p data-i18n="faq-vehicle-desc">Avanza, Xenia, Innova, dan Travello 8 seat tersedia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="grid grid-2 gap-12">
-        <div class="fade-in">
-          <img src="https://picsum.photos/id/1074/800/600" alt="Supir Lokal" class="card" style="border-radius:1rem;overflow:hidden" loading="lazy">
-        </div>
-        <div class="fade-in">
-          <h2 class="h2" data-i18n="about-title">Tentang Kami</h2>
-          <p class="text-xl" data-i18n="about-desc">MEDAN TOBA SUMATERA TOUR & TRAVEL adalah tim lokal yang berdedikasi melayani wisatawan dari Medan ke Danau Toba sejak 2018.</p>
-          
-          <div style="margin-top:1.5rem">
-            <div class="feature"><i class="fas fa-check"></i> <span data-i18n="about-driver">Supir Muslim & Amanah</span></div>
-            <div class="feature"><i class="fas fa-check"></i> <span data-i18n="about-guide">Panduan Lokal</span></div>
-            <div class="feature"><i class="fas fa-check"></i> <span data-i18n="about-halal">Wisata Halal</span></div>
-            <div class="feature"><i class="fas fa-check"></i> <span data-i18n="about-experience">6 Tahun Pengalaman</span></div>
-          </div>
-          
-          <a href="#contact" class="btn btn-ghost" style="margin-top:1.5rem" data-i18n="about-contact">Hubungi Kami →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section bg-gray-50 dark:bg-gray-800" id="contact">
-    <div class="container">
-      <div class="text-center mb-12 fade-in">
-        <h2 class="h2" data-i18n="contact-title">Hubungi Kami</h2>
-        <p class="text-xl" data-i18n="contact-desc">Pesan sekarang atau konsultasikan rencana perjalananmu.</p>
-      </div>
-      
-      <div class="grid grid-2 gap-8">
-        <form id="contactForm" class="card card-pad" novalidate>
-          <div class="grid grid-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium mb-1" data-i18n="form-name">Nama Lengkap</label>
-              <input type="text" id="form-name-input" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1" data-i18n="form-date">Tanggal Perjalanan</label>
-              <input type="date" id="form-date-input" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-          </div>
-          
-          <div class="grid grid-2 gap-4" style="margin-top:1rem">
-            <div>
-              <label class="block text-sm font-medium mb-1" data-i18n="form-people">Jumlah Orang</label>
-              <input type="number" id="form-people-input" placeholder="2" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-            <div>
-              <label class="block text-sm font-medium mb-1" data-i18n="form-pickup">Lokasi Jemput</label>
-              <input type="text" id="form-pickup-input" placeholder="Hotel, Bandara, dll" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-          </div>
-          
-          <div style="margin-top:1rem">
-            <label class="block text-sm font-medium mb-1" data-i18n="form-package">Pilih Paket</label>
-            <select id="form-package-input" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
-              <option value="Paket 1 Hari">Paket 1 Hari</option>
-              <option value="Paket 2 Hari 1 Malam">Paket 2 Hari 1 Malam</option>
-              <option value="Paket 3 Hari 2 Malam">Paket 3 Hari 2 Malam</option>
-              <option value="Custom Trip">Custom Trip</option>
-            </select>
-          </div>
-          
-          <div style="margin-top:1rem">
-            <button type="submit" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="form-submit">Kirim ke WhatsApp</span>
-            </button>
-          </div>
-          
-          <output id="formStatus" class="text-sm mt-2 text-gray-500"></output>
-        </form>
-        
-        <div class="card card-pad">
-          <h3 class="h3" data-i18n="contact-info">Informasi Kontak</h3>
-          
-          <div style="margin-top:1rem">
-            <div class="feature"><i class="fas fa-map-marker-alt"></i> <span data-i18n="contact-location">Medan & Bandara Kualanamu</span></div>
-            <div class="feature"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281397606622">+62 813-9760-6622</a></div>
-            <div class="feature"><i class="far fa-envelope"></i> <a href="mailto:info@tobatravel.com">info@tobatravel.com</a></div>
-            <div class="feature"><i class="far fa-clock"></i> <span data-i18n="contact-hours">07.00 – 22.00 WIB</span></div>
-          </div>
-          
-          <div style="margin-top:1.5rem">
-            <h4 class="font-semibold mb-2" data-i18n="contact-social">Ikuti Kami</h4>
-            <div class="social-buttons">
-              <a href="https://facebook.com/medantobasumatera" target="_blank" class="social-button facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com/medantobasumatera" target="_blank" class="social-button instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://youtube.com/@medantobasumatera" target="_blank" class="social-button youtube"><i class="fab fa-youtube"></i></a>
-              <a href="https://wa.me/6281397606622" target="_blank" class="social-button whatsapp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-          
-          <div class="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-            <p class="text-sm" data-i18n="contact-invoice">Butuh invoice perusahaan atau PO? Kami support e-invoice & rekening resmi.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="logo-container">
-            <div class="logo">🚐</div>
-            <div>
-              <h3 class="text-lg font-bold">MEDAN TOBA SUMATERA</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">Tour & Travel</p>
-            </div>
-          </div>
-          <p class="mt-4 text-sm" data-i18n="footer-desc">Travel lokal terpercaya dengan supir Muslim. Kami menghadirkan pengalaman wisata Danau Toba yang nyaman, halal, dan berkesan.</p>
-        </div>
-        
-        <div>
-          <h4 class="footer-title" data-i18n="footer-services">Layanan</h4>
-          <a href="#packages" class="footer-link" data-i18n="package-1-title">Paket 1 Hari</a>
-          <a href="#packages" class="footer-link" data-i18n="package-2-title">Paket 2 Hari 1 Malam</a>
-          <a href="#packages" class="footer-link" data-i18n="package-3-title">Paket 3 Hari 2 Malam</a>
-          <a href="#packages" class="footer-link" data-i18n="custom-title">Custom Trip</a>
-        </div>
-        
-        <div>
-          <h4 class="footer-title" data-i18n="footer-contact">Kontak</h4>
-          <a href="tel:+6281397606622" class="footer-link">+62 813-9760-6622</a>
-          <a href="mailto:info@tobatravel.com" class="footer-link">info@tobatravel.com</a>
-          <p class="footer-link">Medan & Bandara Kualanamu</p>
-          <p class="footer-link">07.00 – 22.00 WIB</p>
-        </div>
-        
-        <div>
-          <h4 class="footer-title" data-i18n="footer-follow">Ikuti Kami</h4>
-          <div class="social-buttons" style="margin-top:0.5rem">
-            <a href="https://facebook.com/medantobasumatera" target="_blank" class="social-button facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/medantobasumatera" target="_blank" class="social-button instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com/@medantobasumatera" target="_blank" class="social-button youtube"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.me/6281397606622" target="_blank" class="social-button whatsapp"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="copyright">
-        © <span id="year"></span> MEDAN TOBA SUMATERA TOUR & TRAVEL. Dibuat dengan ❤️ untuk wisatawan Indonesia.
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/6281397606622" class="floating-whatsapp" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script>
-    // DOM Elements
-    const themeToggle = document.getElementById('themeToggle');
-    const langToggle = document.getElementById('langToggle');
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenuClose = document.getElementById('mobileMenuClose');
-    const navMenu = document.getElementById('navMenu');
-    const yearElement = document.getElementById('year');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const lightboxPrev = document.getElementById('lightbox-prev');
-    const lightboxNext = document.getElementById('lightbox-next');
-    const testimonialsSlider = document.getElementById('testimonialsSlider');
-    const prevTestimonial = document.getElementById('prevTestimonial');
-    const nextTestimonial = document.getElementById('nextTestimonial');
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-
-    // State
-    let currentLang = localStorage.getItem('language') || 'id';
-    let currentTheme = localStorage.getItem('theme') || 'light';
-    let currentIndex = 0;
-    let testimonialIndex = 0;
-
-    // Images for lightbox
-    const images = [
-      'https://images.unsplash.com/photo-1558981359-219d6364c9c8?w=1600&q=80',
-      'https://images.unsplash.com/photo-1558981403-c5f9899d3f48?w=1600&q=80',
-      'https://images.unsplash.com/photo-1558980664-10ea99e1f273?w=1600&q=80',
-      'https://images.unsplash.com/photo-1544551763-7ef42032f6de?w=1600&q=80',
-      'https://picsum.photos/id/1074/1600/1000',
-      'https://picsum.photos/id/1084/1600/1000',
-      'https://picsum.photos/id/1080/1600/1000',
-      'https://picsum.photos/id/1070/1600/1000'
-    ];
-
-    // Translations
-    const translations = {
-      id: {
-        "title": "MEDAN TOBA SUMATERA TOUR & TRAVEL | Wisata Halal Medan - Danau Toba",
-        "nav-home": "Beranda",
-        "nav-packages": "Paket Wisata",
-        "nav-gallery": "Galeri",
-        "nav-testimonials": "Testimoni",
-        "nav-faq": "FAQ",
-        "nav-about": "Tentang Kami",
-        "nav-contact": "Kontak",
-        "lang-toggle": "EN",
-        "theme-toggle": "Mode Gelap",
-        "hero-title": "Wisata Nyaman & Halal Medan – Danau Toba",
-        "hero-desc": "Dengan supir Muslim lokal, mobil bersih, dan itinerary yang fleksibel. Pengalaman tak terlupakan dimulai dari sini.",
-        "btn-book": "Daftar Paket Wisata",
-        "btn-see-packages": "Lihat Paket",
-        "btn-book-now": "Booking Sekarang",
-        "btn-consult": "Konsultasi Gratis",
-        "packages-title": "Paket Wisata Populer",
-        "packages-desc": "Pilih paket yang sesuai dengan waktu dan anggaran Anda.",
-        "package-1-title": "Paket 1 Hari",
-        "package-1-desc": "Medan - Toba PP, destinasi utama Parapat & Balige.",
-        "package-1-price": "Rp 750rb/orang",
-        "package-2-title": "Paket 2 Hari 1 Malam",
-        "package-2-desc": "Menginap di Samosir, explore Tomok, Huta Bolon, Bukit Holbung.",
-        "package-2-price": "Mulai Rp 1.5jt/orang",
-        "package-3-title": "Paket 3 Hari 2 Malam",
-        "package-3-desc": "Full experience: Medan, Toba, Samosir, Berastagi.",
-        "package-3-price": "Mulai Rp 2.8jt/orang",
-        "badge-best": "BEST SELLER",
-        "custom-title": "Custom Trip",
-        "custom-desc": "Itinerary fleksibel sesuai kebutuhan Anda.",
-        "custom-price": "Harga Negosiasi",
-        "custom-flex": "Itinerary Fleksibel",
-        "custom-hotel": "Pilihan Hotel",
-        "custom-car": "Semua Jenis Mobil",
-        "custom-consult": "Konsultasi Gratis",
-        "feat-driver": "Supir Muslim",
-        "feat-bbm": "BBM & Parkir",
-        "feat-lunch": "Makan Siang",
-        "feat-guide": "Guide Lokal",
-        "feat-hotel": "Hotel Bintang 2",
-        "feat-meals": "3x Makan",
-        "feat-ticket": "Tiket Wisata",
-        "feat-water": "Air Mineral",
-        "gallery-title": "Galeri Perjalanan Kami",
-        "gallery-desc": "Momen indah pelanggan kami di Danau Toba.",
-        "btn-doc": "Lihat Dokumentasi Lengkap",
-        "testimonials-title": "Apa Kata Mereka?",
-        "testimonials-desc": "Pengalaman nyata dari pelanggan kami yang puas.",
-        "testimonial-name-1": "Ahmad & Keluarga",
-        "testimonial-location-1": "Jakarta",
-        "testimonial-text-1": "Pengalaman luar biasa! Supirnya ramah, mobilnya bersih, dan itinerary-nya sangat teratur. Kami sekeluarga sangat puas dengan MEDAN TOBA SUMATERA.",
-        "testimonial-name-2": "Sarah",
-        "testimonial-location-2": "Bandung",
-        "testimonial-text-2": "MEDAN TOBA SUMATERA memang amanah. Mereka sangat memperhatikan kebutuhan kami, bahkan soal makanan halal. Highly recommended!",
-        "testimonial-name-3": "Ali & Teman-teman",
-        "testimonial-location-3": "Surabaya",
-        "testimonial-text-3": "Galeri foto mereka di website ini sesuai dengan kenyataan. Pemandangannya jauh lebih indah aslinya. Terima kasih MEDAN TOBA SUMATERA!",
-        "faq-title": "Pertanyaan Umum",
-        "faq-payment": "Pembayaran bagaimana?",
-        "faq-payment-desc": "DP 30% via transfer, sisa saat mobil datang menjemput.",
-        "faq-custom": "Bisa custom itinerary?",
-        "faq-custom-desc": "Bisa! Kami menyediakan paket custom sesuai kebutuhan Anda.",
-        "faq-pickup": "Jemput di mana saja?",
-        "faq-pickup-desc": "Kami jemput di seluruh Medan dan Bandara Kualanamu.",
-        "faq-vehicle": "Kendaraan apa tersedia?",
-        "faq-vehicle-desc": "Avanza, Xenia, Innova, dan Travello 8 seat tersedia.",
-        "about-title": "Tentang Kami",
-        "about-desc": "MEDAN TOBA SUMATERA TOUR & TRAVEL adalah tim lokal yang berdedikasi melayani wisatawan dari Medan ke Danau Toba sejak 2018.",
-        "about-driver": "Supir Muslim & Amanah",
-        "about-guide": "Panduan Lokal",
-        "about-halal": "Wisata Halal",
-        "about-experience": "6 Tahun Pengalaman",
-        "about-contact": "Hubungi Kami",
-        "contact-title": "Hubungi Kami",
-        "contact-desc": "Pesan sekarang atau konsultasikan rencana perjalananmu.",
-        "form-name": "Nama Lengkap",
-        "form-date": "Tanggal Perjalanan",
-        "form-people": "Jumlah Orang",
-        "form-pickup": "Lokasi Jemput",
-        "form-package": "Pilih Paket",
-        "form-submit": "Kirim ke WhatsApp",
-        "contact-info": "Informasi Kontak",
-        "contact-location": "Medan & Bandara Kualanamu",
-        "contact-hours": "07.00 – 22.00 WIB",
-        "contact-social": "Ikuti Kami",
-        "contact-invoice": "Butuh invoice perusahaan atau PO? Kami support e-invoice & rekening resmi.",
-        "footer-desc": "Travel lokal terpercaya dengan supir Muslim. Kami menghadirkan pengalaman wisata Danau Toba yang nyaman, halal, dan berkesan.",
-        "footer-services": "Layanan",
-        "footer-contact": "Kontak",
-        "footer-follow": "Ikuti Kami",
-        "stat-customers": "Pelanggan Puas",
-        "stat-experience": "Pengalaman",
-        "stat-halal": "Muslim Friendly"
-      },
-      en: {
-        "title": "MEDAN TOBA SUMATERA TOUR & TRAVEL | Halal Travel Medan - Lake Toba",
-        "nav-home": "Home",
-        "nav-packages": "Tour Packages",
-        "nav-gallery": "Gallery",
-        "nav-testimonials": "Testimonials",
-        "nav-faq": "FAQ",
-        "nav-about": "About Us",
-        "nav-contact": "Contact",
-        "lang-toggle": "ID",
-        "theme-toggle": "Light Mode",
-        "hero-title": "Comfortable & Halal Travel Medan – Lake Toba",
-        "hero-desc": "With local Muslim drivers, clean cars, and flexible itineraries. Unforgettable experience starts here.",
-        "btn-book": "Register Tour Package",
-        "btn-see-packages": "View Packages",
-        "btn-book-now": "Book Now",
-        "btn-consult": "Free Consultation",
-        "packages-title": "Popular Tour Packages",
-        "packages-desc": "Choose a package that suits your time and budget.",
-        "package-1-title": "1-Day Package",
-        "package-1-desc": "Medan - Toba round trip, main destinations Parapat & Balige.",
-        "package-1-price": "IDR 750k/person",
-        "package-2-title": "2 Days 1 Night",
-        "package-2-desc": "Stay in Samosir, explore Tomok, Huta Bolon, Bukit Holbung.",
-        "package-2-price": "From IDR 1.5M/person",
-        "package-3-title": "3 Days 2 Nights",
-        "package-3-desc": "Full experience: Medan, Toba, Samosir, Berastagi.",
-        "package-3-price": "From IDR 2.8M/person",
-        "badge-best": "BEST SELLER",
-        "custom-title": "Custom Trip",
-        "custom-desc": "Flexible itinerary according to your needs.",
-        "custom-price": "Negotiable Price",
-        "custom-flex": "Flexible Itinerary",
-        "custom-hotel": "Hotel Options",
-        "custom-car": "All Car Types",
-        "custom-consult": "Free Consultation",
-        "feat-driver": "Muslim Driver",
-        "feat-bbm": "Fuel & Parking",
-        "feat-lunch": "Lunch",
-        "feat-guide": "Local Guide",
-        "feat-hotel": "2-Star Hotel",
-        "feat-meals": "3 Meals",
-        "feat-ticket": "Entrance Tickets",
-        "feat-water": "Mineral Water",
-        "gallery-title": "Our Travel Gallery",
-        "gallery-desc": "Beautiful moments from our customers at Lake Toba.",
-        "btn-doc": "View Complete Documentation",
-        "testimonials-title": "What They Say?",
-        "testimonials-desc": "Real experiences from our satisfied customers.",
-        "testimonial-name-1": "Ahmad & Family",
-        "testimonial-location-1": "Jakarta",
-        "testimonial-text-1": "Unforgettable experience! The driver was friendly, the car was clean, and the itinerary was very well organized. Our whole family is very satisfied with MEDAN TOBA SUMATERA.",
-        "testimonial-name-2": "Sarah",
-        "testimonial-location-2": "Bandung",
-        "testimonial-text-2": "MEDAN TOBA SUMATERA is indeed trustworthy. They pay great attention to our needs, even regarding halal food. Highly recommended!",
-        "testimonial-name-3": "Ali & Friends",
-        "testimonial-location-3": "Surabaya",
-        "testimonial-text-3": "Their gallery photos on the website match reality. The scenery is even more beautiful in person. Thank you MEDAN TOBA SUMATERA!",
-        "faq-title": "Frequently Asked Questions",
-        "faq-payment": "How is payment?",
-        "faq-payment-desc": "30% down payment via transfer, balance when the car arrives to pick you up.",
-        "faq-custom": "Can I customize the itinerary?",
-        "faq-custom-desc": "Yes! We provide custom packages according to your needs.",
-        "faq-pickup": "Where do you pick up?",
-        "faq-pickup-desc": "We pick up throughout Medan and Kualanamu Airport.",
-        "faq-vehicle": "What vehicles are available?",
-        "faq-vehicle-desc": "Avanza, Xenia, Innova, and 8-seat Travello are available.",
-        "about-title": "About Us",
-        "about-desc": "MEDAN TOBA SUMATERA TOUR & TRAVEL is a local team dedicated to serving travelers from Medan to Lake Toba since 2018.",
-        "about-driver": "Muslim & Trustworthy Drivers",
-        "about-guide": "Local Guides",
-        "about-halal": "Halal Travel",
-        "about-experience": "6 Years of Experience",
-        "about-contact": "Contact Us",
-        "contact-title": "Contact Us",
-        "contact-desc": "Book now or consult about your travel plans.",
-        "form-name": "Full Name",
-        "form-date": "Travel Date",
-        "form-people": "Number of People",
-        "form-pickup": "Pickup Location",
-        "form-package": "Select Package",
-        "form-submit": "Send to WhatsApp",
-        "contact-info": "Contact Information",
-        "contact-location": "Medan & Kualanamu Airport",
-        "contact-hours": "07.00 – 22.00 WIB",
-        "contact-social": "Follow Us",
-        "contact-invoice": "Need a company invoice or PO? We support e-invoice & official accounts.",
-        "footer-desc": "Trusted local travel with Muslim drivers. We provide a comfortable, halal, and memorable Lake Toba travel experience.",
-        "footer-services": "Services",
-        "footer-contact": "Contact",
-        "footer-follow": "Follow Us",
-        "stat-customers": "Satisfied Customers",
-        "stat-experience": "Experience",
-        "stat-halal": "Muslim Friendly"
-      }
-    };
-
-    // Apply language
-    function applyLanguage(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = translations[lang][key];
-          } else if (element.tagName === 'IMG') {
-            element.alt = translations[lang][key];
-          } else {
-            element.textContent = translations[lang][key];
-          }
-        }
-      });
-      
-      document.title = translations[lang].title;
-    }
-
-    // Apply theme
-    function applyTheme(theme) {
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-      themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
-    }
-
-    // Initialize
-    function init() {
-      // Set current year
-      yearElement.textContent = new Date().getFullYear();
-      
-      // Apply saved preferences
-      applyLanguage(currentLang);
-      applyTheme(currentTheme);
-      
-      // Set min date for travel date input
-      const dateInput = document.getElementById('form-date-input');
-      if (dateInput) {
-        const today = new Date().toISOString().split('T')[0];
-        dateInput.min = today;
-      }
-      
-      // Check fade-in elements
-      checkFadeIn();
-    }
-
-    // Theme toggle
-    themeToggle.addEventListener('click', () => {
-      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-      applyTheme(currentTheme);
-      localStorage.setItem('theme', currentTheme);
-    });
-
-    // Language toggle
-    langToggle.addEventListener('click', () => {
-      currentLang = currentLang === 'id' ? 'en' : 'id';
-      applyLanguage(currentLang);
-      localStorage.setItem('language', currentLang);
-      langToggle.textContent = currentLang === 'id' ? 'EN' : 'ID';
-    });
-
-    // Mobile menu
-    mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.add('open');
-    });
-
-    mobileMenuClose.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-    });
-
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-      });
-    });
-
-    // Lightbox functionality
-    function openLightbox(index) {
-      currentIndex = index;
-      lightboxImg.src = images[currentIndex];
-      lightbox.classList.add('open');
-      
-      // Wait for image to load
-      lightboxImg.onload = () => {
-        lightboxImg.classList.add('show');
-      };
-    }
-
-    function closeLightbox() {
-      lightboxImg.classList.remove('show');
-      setTimeout(() => {
-        lightbox.classList.remove('open');
-      }, 300);
-    }
-
-    function showNextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      lightboxImg.classList.remove('show');
-      setTimeout(() => {
-        lightboxImg.src = images[currentIndex];
-        lightboxImg.onload = () => {
-          lightboxImg.classList.add('show');
-        };
-      }, 300);
-    }
-
-    function showPrevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      lightboxImg.classList.remove('show');
-      setTimeout(() => {
-        lightboxImg.src = images[currentIndex];
-        lightboxImg.onload = () => {
-          lightboxImg.classList.add('show');
-        };
-      }, 300);
-    }
-
-    // Lightbox event listeners
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-    lightboxPrev.addEventListener('click', showPrevImage);
-    lightboxNext.addEventListener('click', showNextImage);
-
-    // Keyboard navigation for lightbox
-    document.addEventListener('keydown', (e) => {
-      if (!lightbox.classList.contains('open')) return;
-      
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') showNextImage();
-      if (e.key === 'ArrowLeft') showPrevImage();
-    });
-
-    // Testimonial slider
-    function showTestimonial(index) {
-      const testimonials = document.querySelectorAll('.testimonial');
-      const total = testimonials.length;
-      
-      testimonialsSlider.style.transform = `translateX(-${index * (testimonials[0].offsetWidth + 16)}px)`;
-    }
-
-    prevTestimonial.addEventListener('click', () => {
-      testimonialIndex = (testimonialIndex - 1 + 3) % 3;
-      showTestimonial(testimonialIndex);
-    });
-
-    nextTestimonial.addEventListener('click', () => {
-      testimonialIndex = (testimonialIndex + 1) % 3;
-      showTestimonial(testimonialIndex);
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const accordion = header.parentElement;
-        const content = header.nextElementSibling;
-        
-        // Close all other accordions
-        document.querySelectorAll('.accordion').forEach(item => {
-          if (item !== accordion) {
-            item.classList.remove('open');
-            item.querySelector('.accordion-header').classList.remove('open');
-            item.querySelector('.accordion-content').classList.remove('open');
-            item.querySelector('.fa-chevron-down').style.transform = 'rotate(0deg)';
-          }
-        });
-        
-        // Toggle current accordion
-        accordion.classList.toggle('open');
-        header.classList.toggle('open');
-        content.classList.toggle('open');
-        
-        // Rotate chevron
-        const chevron = header.querySelector('.fa-chevron-down');
-        chevron.style.transform = accordion.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
-      });
-    });
-
-    // Contact form
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      const name = document.getElementById('form-name-input').value;
-      const date = document.getElementById('form-date-input').value;
-      const people = document.getElementById('form-people-input').value;
-      const pickup = document.getElementById('form-pickup-input').value.trim();
-      const pkg = document.getElementById('form-package-input').value;
-      
-      if (!name || !date || !people || !pickup) {
-        formStatus.textContent = 'Mohon lengkapi semua data!';
-        formStatus.style.color = 'red';
-        return;
-      }
-      
-      const formattedDate = new Date(date).toLocaleDateString('id-ID', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-      });
-      
-      const message = `Halo MEDAN TOBA SUMATERA!%0A%0ASaya ingin booking:%0A%0A*Paket:* ${pkg}%0A*Nama:* ${name}%0A*Tanggal:* ${formattedDate}%0A*Jumlah Orang:* ${people}%0A*Lokasi Jemput:* ${pickup}%0A%0AMohon info lebih lanjut. Terima kasih!`;
-      
-      const whatsappUrl = `https://wa.me/6281397606622?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-      
-      formStatus.textContent = 'Pesan telah dikirim ke WhatsApp!';
-      formStatus.style.color = 'green';
-      
-      // Reset form
-      setTimeout(() => {
-        contactForm.reset();
-        formStatus.textContent = '';
-      }, 3000);
-    });
-
-    // Fade-in animation on scroll
-    function checkFadeIn() {
-      const fadeElements = document.querySelectorAll('.fade-in');
-      
-      fadeElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < window.innerHeight - elementVisible) {
-          element.classList.add('active');
-        }
-      });
-    }
-
-    // Scroll event for fade-in
-    window.addEventListener('scroll', checkFadeIn);
-    window.addEventListener('load', checkFadeIn);
-
-    // Initialize the app
-    init();
-  </script>
-</body>
-</html>
+      <div class="card pad fade-in">
+        <div class="kpi"><strong>100%</strong> <span class="muted">Muslim Friendly</
