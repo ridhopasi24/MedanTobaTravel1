@@ -1,17 +1,3 @@
-Maaf sekali atas kebingungannya! Saya memahami betapa frustasinya melihat hasil yang tidak berubah.
-
-Setelah memeriksa kembali, **masalah utamanya adalah perbedaan sistem CSS yang digunakan**:
-
-*   **Kode saya:** Menggunakan **Tailwind CSS** dengan kelas seperti `grid`, `md:grid-cols-2`, `gap-8`.
-*   **Referensi Anda:** Menggunakan **vanilla CSS** atau sistem kelas yang berbeda.
-
-Karena kode saya tidak menyertakan framework Tailwind, kelas-kelas tersebut **tidak memiliki efek apa pun**, sehingga tata letak tetap satu kolom.
-
-**Solusi: Saya akan mengganti sistem grid Tailwind dengan struktur CSS inline yang kompatibel.**
-
-Berikut kode yang sudah saya revisi dengan **tata letak 3 baris × 2 kolom yang benar-benar berfungsi tanpa Tailwind**:
-
-```html
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -1783,4 +1769,3 @@ Mohon informasi lebih lanjut. Terima kasih!`;
   </script>
 </body>
 </html>
-```
