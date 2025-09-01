@@ -1,3 +1,16 @@
+Maaf sekali atas kebingungannya! Saya memahami betapa frustasinya melihat hasil yang tidak berubah.
+
+Setelah memeriksa kembali, **masalah utamanya adalah perbedaan sistem CSS yang digunakan**:
+
+*   **Kode saya:** Menggunakan **Tailwind CSS** dengan kelas seperti `grid`, `md:grid-cols-2`, `gap-8`.
+*   **Referensi Anda:** Menggunakan **vanilla CSS** atau sistem kelas yang berbeda.
+
+Karena kode saya tidak menyertakan framework Tailwind, kelas-kelas tersebut **tidak memiliki efek apa pun**, sehingga tata letak tetap satu kolom.
+
+**Solusi: Saya akan mengganti sistem grid Tailwind dengan struktur CSS inline yang kompatibel.**
+
+Berikut kode yang sudah saya revisi dengan **tata letak 3 baris × 2 kolom yang benar-benar berfungsi tanpa Tailwind**:
+
 ```html
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -634,6 +647,30 @@
       transform: scale(1.1);
     }
 
+    /* === PERUBAHAN UTAMA: Grid 3x2 untuk Paket Wisata === */
+    .packages-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .packages-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .package-col {
+      flex: 1 1 calc(50% - 1rem);
+      min-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .package-col {
+        flex: 1 1 100%;
+      }
+    }
+
     @media (max-width: 1024px) {
       .grid-3 {
         grid-template-columns: repeat(2, 1fr);
@@ -799,129 +836,135 @@
         <p class="text-xl" data-i18n="packages-desc">Pilih paket yang sesuai dengan waktu dan anggaran Anda.</p>
       </div>
       
-      <!-- Grid Layout: 3 rows, 2 columns -->
-      <div class="grid md:grid-cols-2 gap-8">
+      <!-- Grid Layout: 3 rows, 2 columns menggunakan flexbox -->
+      <div class="packages-grid">
         <!-- Row 1 -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="package-3-title">Paket 3 Hari 2 Malam</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1200 (2 orang)</p>
-            <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
-            <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya / Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry via Tigaras → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 2:</strong> Sarapan, check out → Batu Siallagan → Bukit Burung View → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Tele Tower → Loken Barn → Sipiso-piso Waterfall → Makan malam → Check in Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 3:</strong> 04.00 Hiking Sibayak (optional) → Sarapan, check out → Sarune Cafe → Bukit Gundaling → Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Oleh-oleh Medan → Makan siang → Drop off Airport → Tour Finish 🙏</div>
+        <div class="packages-row">
+          <div class="package-col package-card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="package-3-title">Paket 3 Hari 2 Malam</h3>
+              <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1200 (2 orang)</p>
+              <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
+              <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya / Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry via Tigaras → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 2:</strong> Sarapan, check out → Batu Siallagan → Bukit Burung View → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Tele Tower → Loken Barn → Sipiso-piso Waterfall → Makan malam → Check in Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 3:</strong> 04.00 Hiking Sibayak (optional) → Sarapan, check out → Sarune Cafe → Bukit Gundaling → Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Oleh-oleh Medan → Makan siang → Drop off Airport → Tour Finish 🙏</div>
+              </div>
+              <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%203H2M." target="_blank" class="btn btn-whatsapp btn-block">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
+              </a>
             </div>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%203H2M." target="_blank" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
-            </a>
           </div>
-        </div>
 
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="package-4-title">Paket 4 Hari 3 Malam</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1600 (3 orang)</p>
-            <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note-2">* Hiking Sibayak: RM 100 untuk 2 orang</p>
-            <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              <div class="itinerary-day"><strong>Day 1:</strong> Pick up Airport → Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Panorama Parapat → Pantai I Love Toba → Ferry in Samosir → Makan malam → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Tomok Village / Palace → Pantai Batu Hoda → Jembatan Tano Ponggol → Tulas View / Bukit Burung → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Aek Natonang / Danau Sidohoni → Makan malam → Stay Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 3:</strong> Sarapan, check out → Tele Tower → Loken Barn → Sipiso-piso Waterfall → Sarune Cafe → Gundaling Hill → Pasar Buah Berastagi → Hot Spring Sidebuk-debuk → Makan malam → Check in Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 4:</strong> 04.00 Hiking Sibayak (optional) → Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan → Drop off Airport / Hotel Medan → Tour Finish 🙏</div>
+          <div class="package-col package-card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="package-4-title">Paket 4 Hari 3 Malam</h3>
+              <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1600 (3 orang)</p>
+              <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note-2">* Hiking Sibayak: RM 100 untuk 2 orang</p>
+              <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <div class="itinerary-day"><strong>Day 1:</strong> Pick up Airport → Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Panorama Parapat → Pantai I Love Toba → Ferry in Samosir → Makan malam → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Tomok Village / Palace → Pantai Batu Hoda → Jembatan Tano Ponggol → Tulas View / Bukit Burung → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Aek Natonang / Danau Sidohoni → Makan malam → Stay Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 3:</strong> Sarapan, check out → Tele Tower → Loken Barn → Sipiso-piso Waterfall → Sarune Cafe → Gundaling Hill → Pasar Buah Berastagi → Hot Spring Sidebuk-debuk → Makan malam → Check in Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 4:</strong> 04.00 Hiking Sibayak (optional) → Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan → Drop off Airport / Hotel Medan → Tour Finish 🙏</div>
+              </div>
+              <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%204H3M." target="_blank" class="btn btn-whatsapp btn-block">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
+              </a>
             </div>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%204H3M." target="_blank" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
-            </a>
           </div>
         </div>
 
         <!-- Row 2 -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="package-5-title-1">Paket 5 Hari 4 Malam – Paket 1</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1800 (2 orang)</p>
-            <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note-3">* Hiking Sibayak: RM 75/orang</p>
-            <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              <div class="itinerary-day"><strong>Day 1:</strong> Pick up Airport → Sukulikap Waterfall → Hot Spring Sidebuk-debuk → Makan malam → Check in Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 2:</strong> 04.00 Hiking Sibayak (optional) → Sarune Cafe → Savana Sinabung → Danau Lau Kawar → Pasar Buah Berastagi → Bukit Gundaling → Lumbini Park / Tangke Tabu → Makan malam → Stay Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 3:</strong> Sipiso-piso Waterfall → Loken Barn → Tele Tower → Efrata Waterfall → Holbung Hills → Bukit Cinta → Bukit Burung → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 4:</strong> Batu Siallagan → Ferry out Samosir → Simarjarunjung View → Kebun Teh Sidamanik → Air Bah Manik → On the way Medan → Makan malam → Check in Hotel Medan</div>
-              <div class="itinerary-day"><strong>Day 5:</strong> Istana Maimoon → Masjid Raya → Oleh-oleh Medan → Shopping Batik / Mall → Drop off Kualanamu Airport → Tour Finish 🙏</div>
+        <div class="packages-row">
+          <div class="package-col package-card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="package-5-title-1">Paket 5 Hari 4 Malam – Paket 1</h3>
+              <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1800 (2 orang)</p>
+              <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note-3">* Hiking Sibayak: RM 75/orang</p>
+              <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <div class="itinerary-day"><strong>Day 1:</strong> Pick up Airport → Sukulikap Waterfall → Hot Spring Sidebuk-debuk → Makan malam → Check in Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 2:</strong> 04.00 Hiking Sibayak (optional) → Sarune Cafe → Savana Sinabung → Danau Lau Kawar → Pasar Buah Berastagi → Bukit Gundaling → Lumbini Park / Tangke Tabu → Makan malam → Stay Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 3:</strong> Sipiso-piso Waterfall → Loken Barn → Tele Tower → Efrata Waterfall → Holbung Hills → Bukit Cinta → Bukit Burung → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 4:</strong> Batu Siallagan → Ferry out Samosir → Simarjarunjung View → Kebun Teh Sidamanik → Air Bah Manik → On the way Medan → Makan malam → Check in Hotel Medan</div>
+                <div class="itinerary-day"><strong>Day 5:</strong> Istana Maimoon → Masjid Raya → Oleh-oleh Medan → Shopping Batik / Mall → Drop off Kualanamu Airport → Tour Finish 🙏</div>
+              </div>
+              <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%205H4M%20(Paket%201)." target="_blank" class="btn btn-whatsapp btn-block">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
+              </a>
             </div>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%205H4M%20(Paket%201)." target="_blank" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
-            </a>
           </div>
-        </div>
 
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="package-5-title-2">Paket 5 Hari 4 Malam – Paket 2</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1800 (2 orang)</p>
-            <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
-            <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya & Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry in Samosir → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Bukit Burung View → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Jembatan Tano Ponggol → Tomok Palace → Makan malam → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 3:</strong> Tele Tower → Loken Barn → Sipiso-piso Waterfall → Sarune Cafe → Gundaling Hill → Pasar Buah Berastagi → Makan malam → Check in Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 4:</strong> 04.00 Hiking Sibayak (optional) → Savana Sinabung → Lau Kawar Lake → Hot Spring Sidebuk-debuk → Bukit Gundaling → Lumbini Park → Makan malam → Stay Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 5:</strong> Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan → Shopping Mall / Batik → Drop off Airport → Tour Finish 🙏</div>
+          <div class="package-col package-card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="package-5-title-2">Paket 5 Hari 4 Malam – Paket 2</h3>
+              <p class="text-3xl font-extrabold text-green-600 mb-4">RM 1800 (2 orang)</p>
+              <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
+              <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya & Mbah Damanik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry in Samosir → Pantai Batu Hoda → Makan malam → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Bukit Burung View → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Jembatan Tano Ponggol → Tomok Palace → Makan malam → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 3:</strong> Tele Tower → Loken Barn → Sipiso-piso Waterfall → Sarune Cafe → Gundaling Hill → Pasar Buah Berastagi → Makan malam → Check in Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 4:</strong> 04.00 Hiking Sibayak (optional) → Savana Sinabung → Lau Kawar Lake → Hot Spring Sidebuk-debuk → Bukit Gundaling → Lumbini Park → Makan malam → Stay Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 5:</strong> Sikulikap Waterfall → Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan → Shopping Mall / Batik → Drop off Airport → Tour Finish 🙏</div>
+              </div>
+              <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%205H4M%20(Paket%202)." target="_blank" class="btn btn-whatsapp btn-block">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
+              </a>
             </div>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%205H4M%20(Paket%202)." target="_blank" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
-            </a>
           </div>
         </div>
 
         <!-- Row 3 -->
-        <div class="package-card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="package-6-title">Paket 6 Hari 5 Malam</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">RM 2200 (2 orang)</p>
-            <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
-            <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-              <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya & Air Bah Manik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry in Samosir → Batu Passa → Check in Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Tomok Palace → Pantai Batu Hoda → Jembatan Tano Ponggol → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Stay Hotel Samosir</div>
-              <div class="itinerary-day"><strong>Day 3:</strong> Geosite Sipinsur → Huta Ginjang → Pantai Bul Bul → Khairos Cafe → Bukit Senyum → Pantai Bebas Parapat → Check in Hotel Parapat</div>
-              <div class="itinerary-day"><strong>Day 4:</strong> Sipiso-piso Waterfall → Loken Barn → Paropo – Silalahi → Pasar Buah Berastagi → Gundaling Hill → Check in Hotel Berastagi</div>
-              <div class="itinerary-day"><strong>Day 5:</strong> 04.00 Hiking Sibayak (optional) → Sarune Cafe → Savana Sinabung → Danau Lau Kawar → Sikulikap Waterfall → Sibolang Durian → Check in Hotel Medan</div>
-              <div class="itinerary-day"><strong>Day 6:</strong> Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan & Shopping Batik → Drop off Airport → Tour Finish 🙏</div>
+        <div class="packages-row">
+          <div class="package-col package-card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="package-6-title">Paket 6 Hari 5 Malam</h3>
+              <p class="text-3xl font-extrabold text-green-600 mb-4">RM 2200 (2 orang)</p>
+              <p class="text-sm text-red-500 mb-4" data-i18n="hiking-note">* Hiking Sibayak: RM 100/pax (cash)</p>
+              <div class="space-y-3 mb-6 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <div class="itinerary-day"><strong>Day 1:</strong> Pick up Kualanamu Airport → Paten Jaya & Air Bah Manik → Kebun Teh Sidamanik → Simarjarunjung View → Ferry in Samosir → Batu Passa → Check in Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 2:</strong> Batu Siallagan → Tomok Palace → Pantai Batu Hoda → Jembatan Tano Ponggol → Holbung Hills → Bukit Sibea-bea → Efrata Waterfall → Stay Hotel Samosir</div>
+                <div class="itinerary-day"><strong>Day 3:</strong> Geosite Sipinsur → Huta Ginjang → Pantai Bul Bul → Khairos Cafe → Bukit Senyum → Pantai Bebas Parapat → Check in Hotel Parapat</div>
+                <div class="itinerary-day"><strong>Day 4:</strong> Sipiso-piso Waterfall → Loken Barn → Paropo – Silalahi → Pasar Buah Berastagi → Gundaling Hill → Check in Hotel Berastagi</div>
+                <div class="itinerary-day"><strong>Day 5:</strong> 04.00 Hiking Sibayak (optional) → Sarune Cafe → Savana Sinabung → Danau Lau Kawar → Sikulikap Waterfall → Sibolang Durian → Check in Hotel Medan</div>
+                <div class="itinerary-day"><strong>Day 6:</strong> Istana Maimoon → Tjong A Fie Mansion → Vihara Medan → Oleh-oleh Medan & Shopping Batik → Drop off Airport → Tour Finish 🙏</div>
+              </div>
+              <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%206H5M." target="_blank" class="btn btn-whatsapp btn-block">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
+              </a>
             </div>
-            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Paket%206H5M." target="_blank" class="btn btn-whatsapp btn-block">
-              <i class="fab fa-whatsapp"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
-            </a>
           </div>
-        </div>
 
-        <!-- Fasilitas Paket (Semua Paket) -->
-        <div class="card fade-in">
-          <div class="card-pad">
-            <h3 class="h3" data-i18n="facilities-title">💡 Fasilitas Paket (Semua Paket)</h3>
-            <div class="space-y-6 text-sm">
-              <div>
-                <p class="font-semibold text-green-600" data-i18n="included">✅ Termasuk:</p>
-                <ul class="space-y-1 text-gray-700 dark:text-gray-300">
-                  <li><span data-i18n="driver">• Driver Profesional</span></li>
-                  <li><span data-i18n="car">• Mobil AC Nyaman</span></li>
-                  <li><span data-i18n="fuel">• BBM & Tol</span></li>
-                  <li><span data-i18n="tickets">• Tiket Masuk & Ferry</span></li>
-                  <li><span data-i18n="water">• Air Mineral</span></li>
-                  <li><span data-i18n="driver-meal">• Makan Driver</span></li>
-                  <li><span data-i18n="driver-accom">• Penginapan Driver</span></li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold text-red-500" data-i18n="excluded">❌ Tidak Termasuk:</p>
-                <ul class="space-y-1 text-gray-700 dark:text-gray-300">
-                  <li><span data-i18n="hotel">• Hotel Penginapan</span></li>
-                  <li><span data-i18n="meals">• Makan Siang & Malam</span></li>
-                  <li><span data-i18n="guide">• Guide Hiking Sibayak</span></li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold text-blue-500" data-i18n="note">📌 Catatan:</p>
-                <p class="text-gray-700 dark:text-gray-300 text-sm">
-                  <span data-i18n="note-text">Kami juga menyediakan paket termasuk hotel. Harga berbeda, bisa dibahas via chat pribadi.</span>
-                </p>
+          <!-- Fasilitas Paket (Semua Paket) -->
+          <div class="package-col card fade-in">
+            <div class="card-pad">
+              <h3 class="h3" data-i18n="facilities-title">💡 Fasilitas Paket (Semua Paket)</h3>
+              <div class="space-y-6 text-sm">
+                <div>
+                  <p class="font-semibold text-green-600" data-i18n="included">✅ Termasuk:</p>
+                  <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+                    <li><span data-i18n="driver">• Driver Profesional</span></li>
+                    <li><span data-i18n="car">• Mobil AC Nyaman</span></li>
+                    <li><span data-i18n="fuel">• BBM & Tol</span></li>
+                    <li><span data-i18n="tickets">• Tiket Masuk & Ferry</span></li>
+                    <li><span data-i18n="water">• Air Mineral</span></li>
+                    <li><span data-i18n="driver-meal">• Makan Driver</span></li>
+                    <li><span data-i18n="driver-accom">• Penginapan Driver</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-red-500" data-i18n="excluded">❌ Tidak Termasuk:</p>
+                  <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+                    <li><span data-i18n="hotel">• Hotel Penginapan</span></li>
+                    <li><span data-i18n="meals">• Makan Siang & Malam</span></li>
+                    <li><span data-i18n="guide">• Guide Hiking Sibayak</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-blue-500" data-i18n="note">📌 Catatan:</p>
+                  <p class="text-gray-700 dark:text-gray-300 text-sm">
+                    <span data-i18n="note-text">Kami juga menyediakan paket termasuk hotel. Harga berbeda, bisa dibahas via chat pribadi.</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
